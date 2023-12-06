@@ -22,7 +22,12 @@ let value = 0;
 	function draw() {
 	let spectrum = fft.analyze();
 	background(0);
-		
+		userStartAudio();
+
+    
+      
+    
+
   // Calculating the angle based on mouse position
   let mouseAngle = atan2(mouseY - height / 2, mouseX - width / 2) + PI / 2;
 
@@ -66,6 +71,7 @@ push();
 			
 			rect(0, 0, 50, 5);
     pop();
+    userStartAudio();
   }
 
 pop(); 
@@ -75,4 +81,5 @@ pop();
   textSize(32);
   text(value * 5, width / 10 * 4.8, height / 10 * 8.5);
   text("%", width / 10 * 5.15, height / 10 * 8.5);
-}
+} 
+
