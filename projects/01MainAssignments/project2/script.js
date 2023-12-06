@@ -12,6 +12,9 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
+
+  userStartAudio();
+  
 	mySound.setVolume(0); 
 	mySound.play();
 	fft = new p5.FFT();
@@ -22,7 +25,7 @@ let value = 0;
 	function draw() {
 	let spectrum = fft.analyze();
 	background(0);
-		userStartAudio();
+		
 
     
       
@@ -71,7 +74,7 @@ push();
 			
 			rect(0, 0, 50, 5);
     pop();
-    userStartAudio();
+    //userStartAudio();
   }
 
 pop(); 
